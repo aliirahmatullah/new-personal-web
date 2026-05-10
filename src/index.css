@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 30s linear infinite;
+  --color-primary: #111111;
+  --color-secondary: #F4F4F0;
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-secondary text-primary font-sans antialiased;
+    overflow-x: hidden;
+  }
+  
+  /* Enforce sharp corners globally */
+  * {
+    border-radius: 0 !important;
+  }
+}
+
+
+@layer components {
+  .marquee-container {
+    @apply flex whitespace-nowrap overflow-hidden;
+  }
+  
+  .marquee-content {
+    @apply flex shrink-0 min-w-full;
+  }
+  
+  .marquee-item {
+    @apply flex-shrink-0 px-4;
+  }
+
+  .border-text {
+    -webkit-text-stroke: 1px black;
+  }
+}
+
+/* Custom scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
