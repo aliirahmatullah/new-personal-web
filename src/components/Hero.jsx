@@ -150,19 +150,22 @@ const Hero = () => {
         <div className="marquee-container">
           <div className="animate-marquee marquee-content flex items-center h-full gap-24 px-12">
             {Array(5).fill([
+              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
               "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg",
-              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg",
-              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
               "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
+              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+              "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
             ]).flat().map((src, i) => (
               <img
                 key={i}
                 src={src}
-                className="h-10 w-10 filter grayscale contrast-200"
+                className="h-10 w-10 object-contain"
                 alt="Tech Logo"
               />
             ))}
