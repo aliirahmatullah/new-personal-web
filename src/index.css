@@ -3,8 +3,15 @@
 @theme {
   --animate-marquee: marquee 30s linear infinite;
   --animate-marquee-reverse: marquee-reverse 30s linear infinite;
+  
   --color-primary: #111111;
   --color-secondary: #F4F4F0;
+  --color-tertiary: #E5E5E5;
+  --color-accent: #FF3333;
+  --color-muted: #333333;
+
+  --shadow-brutal-accent: 8px 8px 0 0 #FF3333;
+  --shadow-brutal-primary: 8px 8px 0 0 #111111;
 
   @keyframes marquee {
     0% { transform: translateX(0); }
